@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Heart } from 'lucide-react';
+import logo from '../assets/logo.png';
 import './Header.css';
-import logo from '../assets/udayan-logo.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,14 +30,16 @@ const Header = () => {
     { name: 'Workshops', path: '/workshops' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Blog & Stories', path: '/blog' },
+    { name: 'Team', path: '/team' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
       <div className="container header-container">
-        <Link to="/" className="logo">
-          <img src={logo} alt="UDAYAN Public Empowerment Trust" className="logo-img" />
+        {/* Logo */}
+        <Link to="/" className="header-logo-link">
+          <img src={logo} alt="Udayan Public Empowerment Trust" className="header-logo" />
         </Link>
 
         {/* Desktop Nav */}
@@ -67,7 +69,6 @@ const Header = () => {
       <div className={`mobile-nav-overlay ${isOpen ? 'active' : ''}`} onClick={() => setIsOpen(false)}></div>
       <nav className={`mobile-nav ${isOpen ? 'active' : ''}`}>
         <div className="mobile-nav-header">
-          <img src={logo} alt="UDAYAN" className="logo-img" />
           <button onClick={() => setIsOpen(false)}><X size={28} /></button>
         </div>
         <div className="mobile-nav-links">

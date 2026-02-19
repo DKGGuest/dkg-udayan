@@ -21,6 +21,7 @@ import GetInvolved from './pages/GetInvolved';
 import News from './pages/News';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
+import Team from './pages/Team';
 import NotFound from './pages/NotFound';
 import './index.css';
 
@@ -50,6 +51,7 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/team" element={<Team />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
