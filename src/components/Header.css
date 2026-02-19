@@ -23,16 +23,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    max-width: 100%;
+    margin: 0;
 }
 
 .header-logo-link {
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    margin-left: 0;
+    margin-right: auto;
 }
 
+
 .header-logo {
-    height: 52px;
+    height: 75px;
     width: auto;
     object-fit: contain;
     transition: transform 0.2s ease, opacity 0.2s ease;
