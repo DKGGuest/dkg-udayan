@@ -108,8 +108,15 @@ const Team = () => {
                         </span>
                         <h1>Meet the Team</h1>
                         <p>
-                            Passionate changemakers united by a single purpose — to uplift rural artisans,
-                            celebrate India's craft heritage, and create sustainable futures for communities.
+                            An artist who is also a researcher and author, heads the Udayan family. She is
+assisted by IT professionals and experts in
+training methods, persons from all walks of
+life such as academicians, professionals,
+researchers etc. who are interested in
+furthering the objectives of the Trust. There
+are also village master craftsmen who come
+from a background where such art has been
+practiced for generations.
                         </p>
                     </div>
                 </section>
