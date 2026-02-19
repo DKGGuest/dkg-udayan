@@ -6,58 +6,24 @@ import ArtisanCard from '../components/ArtisanCard';
 import ProductCard from '../components/ProductCard';
 import { Sparkles, Users, Award, TrendingUp, ArrowRight } from 'lucide-react';
 
-const Home = () => {
-  // Sample data - replace with API calls
-  const featuredArtisans = [
-    {
-      id: 1,
-      name: 'Lakshmi Devi',
-      craft: 'Madhubani Painting',
-      location: 'Bihar',
-      image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=500&h=500&fit=crop'
-    },
-    {
-      id: 2,
-      name: 'Ramesh Kumar',
-      craft: 'Pottery & Terracotta',
-      location: 'Rajasthan',
-      image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=500&h=500&fit=crop'
-    },
-    {
-      id: 3,
-      name: 'Savita Sharma',
-      craft: 'Handloom Weaving',
-      location: 'Gujarat',
-      image: 'https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?w=500&h=500&fit=crop'
-    }
-  ];
+import { artisans } from '../data/artisans';
+import { products } from '../data/products';
 
-  const featuredProducts = [
-    {
-      id: 1,
-      name: 'Hand-Painted Madhubani Wall Art',
-      artisan: 'Lakshmi Devi',
-      description: 'Traditional Madhubani art depicting nature and mythology',
-      image: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&h=450&fit=crop',
-      featured: true
-    },
-    {
-      id: 2,
-      name: 'Terracotta Decorative Vase',
-      artisan: 'Ramesh Kumar',
-      description: 'Handcrafted terracotta vase with traditional motifs',
-      image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=600&h=450&fit=crop',
-      featured: false
-    },
-    {
-      id: 3,
-      name: 'Handwoven Cotton Saree',
-      artisan: 'Savita Sharma',
-      description: 'Pure cotton saree with intricate handloom patterns',
-      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&h=450&fit=crop',
-      featured: true
-    }
-  ];
+import EnquiryModal from '../components/EnquiryModal';
+
+const Home = () => {
+  const [selectedProduct, setSelectedProduct] = React.useState(null);
+
+  const openInquiry = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const closeInquiry = () => {
+    setSelectedProduct(null);
+  };
+
+  const featuredArtisans = artisans.slice(0, 3);
+  const featuredProducts = products.filter(p => p.featured).slice(0, 3);
 
   return (
     <>
@@ -154,7 +120,11 @@ const Home = () => {
 
           <div className="product-grid">
             {featuredProducts.map(product => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard
+                key={product.id}
+                product={product}
+                onInquiry={openInquiry}
+              />
             ))}
           </div>
 
@@ -180,6 +150,14 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <EnquiryModal
+        isOpen={!!selectedProduct}
+        onClose={closeInquiry}
+        title="Product Enquiry"
+        formType="enquiry"
+        productName={selectedProduct?.name}
+      />
 
       <style>{`
         .mission-section,

@@ -4,29 +4,22 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, MessageCircle, Heart, Share2 } from 'lucide-react';
 import EnquiryModal from '../components/EnquiryModal';
 
+import { products } from '../data/products';
+
 const ProductDetail = () => {
     const { id } = useParams();
     const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
-    // Sample data - in a real app, fetch by id
-    const product = {
-        id: id,
-        name: 'Hand-Painted Madhubani Wall Art',
-        artisan: 'Lakshmi Devi',
-        category: 'Paintings',
-        price: 'Contact for Price',
-        description: 'This exquisite piece of traditional Madhubani art is hand-painted on handmade paper using natural dyes and pigments. The artwork depicts a vibrant scene from nature, featuring delicate floral patterns and symbolic motifs that are characteristic of the Mithila region.',
-        specifications: [
-            { label: 'Material', value: 'Handmade Paper, Natural Pigments' },
-            { label: 'Dimensions', value: '12 x 18 inches' },
-            { label: 'Origin', value: 'Madhubani, Bihar' },
-            { label: 'Technique', value: 'Freehand Painting with Nib Pens and Brushes' }
-        ],
-        images: [
-            'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&h=600&fit=crop',
-            'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&h=600&fit=crop'
-        ]
-    };
+    const product = products.find(p => p.id === parseInt(id));
+
+    if (!product) {
+        return (
+            <div className="container" style={{ padding: '10rem 0', textAlign: 'center' }}>
+                <h2>Product not found</h2>
+                <Link to="/marketplace" className="btn-primary" style={{ marginTop: '2rem' }}>Back to Marketplace</Link>
+            </div>
+        );
+    }
 
     return (
         <>
@@ -64,7 +57,7 @@ const ProductDetail = () => {
                             <div className="product-info">
                                 <span className="category-tag">{product.category}</span>
                                 <h1>{product.name}</h1>
-                                <p className="artisan-credit">By <Link to="/artisans/1">{product.artisan}</Link></p>
+                                <p className="artisan-credit">By <Link to={`/artisans/${product.artisanId}`}>{product.artisan}</Link></p>
 
                                 <div className="price-tag">{product.price}</div>
 

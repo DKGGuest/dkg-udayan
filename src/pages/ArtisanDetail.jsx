@@ -4,26 +4,22 @@ import { useParams, Link } from 'react-router-dom';
 import { MapPin, Mail, ArrowLeft } from 'lucide-react';
 import EnquiryModal from '../components/EnquiryModal';
 
+import { artisans } from '../data/artisans';
+
 const ArtisanDetail = () => {
   const { id } = useParams();
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
-  // Sample data - replace with API call
-  const artisan = {
-    id: 1,
-    name: 'Lakshmi Devi',
-    craft: 'Madhubani Painting',
-    location: 'Bihar',
-    image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&h=800&fit=crop',
-    story: 'Lakshmi Devi has been practicing Madhubani painting for over 20 years. She learned this traditional art form from her mother and grandmother, continuing a family legacy that spans generations. Her work depicts stories from Hindu mythology and celebrates the beauty of nature.',
-    specialization: 'Traditional Madhubani art featuring intricate patterns, vibrant colors, and mythological themes',
-    gallery: [
-      'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400&h=300&fit=crop',
-      'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=300&fit=crop',
-      'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400&h=300&fit=crop',
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=300&fit=crop'
-    ]
-  };
+  const artisan = artisans.find(a => a.id === parseInt(id));
+
+  if (!artisan) {
+    return (
+      <div className="container" style={{ padding: '10rem 0', textAlign: 'center' }}>
+        <h2>Artisan not found</h2>
+        <Link to="/artisans" className="btn-primary" style={{ marginTop: '2rem' }}>Back to Artisans</Link>
+      </div>
+    );
+  }
 
   return (
     <>

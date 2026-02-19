@@ -4,6 +4,8 @@ import ProductCard from '../components/ProductCard';
 import EnquiryModal from '../components/EnquiryModal';
 import { Search, Filter, Grid, List } from 'lucide-react';
 
+import { products } from '../data/products';
+
 const Marketplace = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -17,54 +19,6 @@ const Marketplace = () => {
   const closeInquiry = () => {
     setSelectedProduct(null);
   };
-
-  const products = [
-    {
-      id: 1,
-      name: 'Hand-Painted Madhubani Wall Art',
-      artisan: 'Lakshmi Devi',
-      category: 'Paintings',
-      description: 'Traditional Madhubani art depicting nature and mythology',
-      image: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&h=450&fit=crop',
-      featured: true
-    },
-    {
-      id: 2,
-      name: 'Terracotta Decorative Vase',
-      artisan: 'Ramesh Kumar',
-      category: 'Pottery',
-      description: 'Handcrafted terracotta vase with traditional motifs',
-      image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=600&h=450&fit=crop',
-      featured: false
-    },
-    {
-      id: 3,
-      name: 'Handwoven Cotton Saree',
-      artisan: 'Savita Sharma',
-      category: 'Textiles',
-      description: 'Pure cotton saree with intricate handloom patterns',
-      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&h=450&fit=crop',
-      featured: true
-    },
-    {
-      id: 4,
-      name: 'Block Printed Table Runner',
-      artisan: 'Meena Kumari',
-      category: 'Textiles',
-      description: 'Hand block printed cotton table runner',
-      image: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&h=450&fit=crop',
-      featured: false
-    },
-    {
-      id: 6,
-      name: 'Embroidered Cushion Cover',
-      artisan: 'Radha Devi',
-      category: 'Textiles',
-      description: 'Hand-embroidered cushion cover with traditional patterns',
-      image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop',
-      featured: false
-    }
-  ];
 
   const categories = ['all', 'Paintings', 'Pottery', 'Textiles', 'Wood Craft', 'Jewelry'];
 
