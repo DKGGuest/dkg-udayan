@@ -10,7 +10,7 @@ const Gallery = () => {
             </Helmet>
             <div className="gallery-page">
                 <section className="page-hero" style={{
-                    background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=1600&h=600&fit=crop) center/cover',
+                    background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/crafts/pottery_1.jpg) center/cover',
                     padding: '10rem 0 6rem',
                     textAlign: 'center',
                     color: 'white',
@@ -27,27 +27,24 @@ const Gallery = () => {
                         Browse our collection of photographs showcasing artisan work, workshops, community events, and traditional crafts.
                     </p>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
                         <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
-                            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&h=400&fit=crop" alt="Traditional textile work" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
+                            <img src="/images/crafts/madhubani_2.jpg" alt="Madhubani Painting" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
                         </div>
                         <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
-                            <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=500&h=400&fit=crop" alt="Artisan at work" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
+                            <img src="/images/crafts/pottery_1.jpg" alt="Terracotta Pottery" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
                         </div>
                         <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
-                            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=500&h=400&fit=crop" alt="Pottery craftsmanship" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
+                            <img src="/images/crafts/weaving_1.jpg" alt="Handloom Saree Weaving" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
                         </div>
                         <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
-                            <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=500&h=400&fit=crop" alt="Block printing" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
+                            <img src="/images/crafts/blockprint_2.jpg" alt="Hand Block Printing" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
                         </div>
                         <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
-                            <img src="https://images.unsplash.com/photo-1590004953392-5aba2e72269a?w=500&h=400&fit=crop" alt="Community workshop" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
+                            <img src="/images/crafts/woodcarving_1.jpg" alt="Traditional Wood Carving" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
                         </div>
                         <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
-                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500&h=400&fit=crop" alt="Embroidery work" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
-                        </div>
-                        <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
-                            <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=500&h=400&fit=crop" alt="Training session" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
+                            <img src="/images/crafts/embroidery_2.jpg" alt="Zardozi Embroidery" style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }} />
                         </div>
                     </div>
                 </div>
