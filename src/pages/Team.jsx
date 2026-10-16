@@ -8,7 +8,8 @@ const teamMembers = [
         name: 'Meera Devi Sharma',
         role: 'Founder & Executive Director',
         bio: 'A visionary leader with 20+ years of grassroots experience, Meera founded Udayan Trust to bridge the gap between rural artisans and global markets. Her work has been recognized by the Ministry of Textiles.',
-        image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop&crop=face',
+        // Indian woman founder - unique from all artisans
+        image: '/images/meera_devi_sharma.jpg',
         expertise: ['Women Empowerment', 'Policy Advocacy', 'Rural Development'],
         email: 'meera@udayan.org',
         linkedin: '#',
@@ -20,7 +21,8 @@ const teamMembers = [
         name: 'Rajiv Kumar Gupta',
         role: 'Head of Programs',
         bio: 'With a background in social work and craft heritage, Rajiv designs and oversees fieldwork programs across 5 states, ensuring artisans receive quality training and holistic support.',
-        image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=400&h=400&fit=crop&crop=face',
+        // Indian man - unique from artisans
+        image: '/images/rajiv_kumar_gupta.jpg',
         expertise: ['Program Management', 'Craft Heritage', 'Field Operations'],
         email: 'rajiv@udayan.org',
         linkedin: '#',
@@ -32,7 +34,8 @@ const teamMembers = [
         name: 'Priya Anand',
         role: 'Community Outreach Coordinator',
         bio: 'Priya is the heart of Udayan\'s ground-level work. She builds trust within rural communities, identifies talented artisans, and ensures women are at the centre of every initiative.',
-        image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop&crop=face',
+        // Indian woman community worker - unique
+        image: '/images/priya_anand.jpg',
         expertise: ['Community Building', 'Women\'s Rights', 'Stakeholder Engagement'],
         email: 'priya@udayan.org',
         linkedin: '#',
@@ -44,7 +47,8 @@ const teamMembers = [
         name: 'Arjun Singh Rawat',
         role: 'Artisan Welfare Officer',
         bio: 'Arjun works closely with artisan cooperatives, manages grievance redressal, and ensures fair pricing and ethical practices across all partnerships with buyers and NGOs.',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+        // Indian man welfare officer - unique
+        image: '/images/arjun_singh_rawat.jpg',
         expertise: ['Fair Trade', 'Cooperative Development', 'Livelihood Support'],
         email: 'arjun@udayan.org',
         linkedin: '#',
@@ -56,7 +60,8 @@ const teamMembers = [
         name: 'Sunita Bai Verma',
         role: 'Master Craft Trainer',
         bio: 'A celebrated Madhubani artist herself, Sunita leads skill-development workshops across villages. She has trained over 300 women in traditional weaving, pottery, and painting techniques.',
-        image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400&h=400&fit=crop&crop=face',
+        // Indian woman craft trainer - unique
+        image: '/images/sunita_bai_verma.jpg',
         expertise: ['Madhubani Art', 'Skill Training', 'Traditional Crafts'],
         email: 'sunita@udayan.org',
         linkedin: '#',
@@ -68,7 +73,8 @@ const teamMembers = [
         name: 'Deepak Nair',
         role: 'Digital & Market Access Lead',
         bio: 'Deepak drives Udayan\'s digital strategy, connecting artisans to e-commerce platforms and ethical buyers worldwide. He has helped generate ₹50+ lakh in online sales for artisans.',
-        image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face',
+        // Indian man digital lead - unique
+        image: '/images/deepak_nair.jpg',
         expertise: ['E-Commerce', 'Digital Marketing', 'Market Linkage'],
         email: 'deepak@udayan.org',
         linkedin: '#',
